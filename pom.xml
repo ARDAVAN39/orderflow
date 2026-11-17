@@ -19,6 +19,7 @@
         <compiler-plugin.version>3.14.0</compiler-plugin.version>
         <surefire-plugin.version>3.5.3</surefire-plugin.version>
         <awaitility.version>4.3.0</awaitility.version>
+        <assertj.version>3.27.6</assertj.version>
         <skipITs>true</skipITs>
     </properties>
 
@@ -81,6 +82,7 @@
         <dependency>
             <groupId>org.assertj</groupId>
             <artifactId>assertj-core</artifactId>
+            <version>${assertj.version}</version>
             <scope>test</scope>
         </dependency>
         <dependency>
