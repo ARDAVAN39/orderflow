@@ -1,0 +1,6 @@
+target/*
+!target/*-runner
+.git/
+.github/
+.idea/
+*.md
