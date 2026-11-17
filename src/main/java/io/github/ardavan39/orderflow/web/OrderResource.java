@@ -29,7 +29,6 @@ import jakarta.ws.rs.core.Response;
 
 @Path("/api/v1/orders")
 @Produces(MediaType.APPLICATION_JSON)
-@Consumes(MediaType.APPLICATION_JSON)
 @Tag(name = "Orders")
 public class OrderResource {
 
@@ -37,6 +36,7 @@ public class OrderResource {
     OrderService orders;
 
     @POST
+    @Consumes(MediaType.APPLICATION_JSON)
     @Operation(summary = "Place an order. It starts PENDING; poll it until the inventory has answered.")
     public Response place(@Valid @NotNull PlaceOrderRequest request) {
         Order order = orders.place(request.customerId(), request.toOrderLines());

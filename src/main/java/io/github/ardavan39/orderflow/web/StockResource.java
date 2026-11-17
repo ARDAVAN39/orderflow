@@ -25,7 +25,6 @@ import jakarta.ws.rs.core.MediaType;
 /** Lets an operator (or a test) set stock levels. */
 @Path("/api/v1/stock")
 @Produces(MediaType.APPLICATION_JSON)
-@Consumes(MediaType.APPLICATION_JSON)
 @Tag(name = "Stock")
 public class StockResource {
 
@@ -37,6 +36,7 @@ public class StockResource {
 
     @PUT
     @Path("/{sku}")
+    @Consumes(MediaType.APPLICATION_JSON)
     @Operation(summary = "Set the available quantity of a SKU")
     public StockLevel set(
             @PathParam("sku") @Pattern(regexp = "[A-Za-z0-9._-]{1,64}") String sku,
