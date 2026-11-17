@@ -1,0 +1,13 @@
+target/
+*.log
+
+.idea/
+*.iml
+.vscode/
+.classpath
+.project
+.settings/
+.quarkus/
+
+.env
+.DS_Store
